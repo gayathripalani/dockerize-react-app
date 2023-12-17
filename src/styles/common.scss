@@ -1,0 +1,89 @@
+@import './variables.scss';
+
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: $blue;
+    display: flex;
+    align-items: center;
+
+    .title {
+        margin-left: 2rem;
+        display: inline-block;
+        font-size: $mediumFont;
+        font-weight: bold;
+        color: $white;
+        text-decoration: none;
+        vertical-align: middle;
+    }
+
+    .lang {
+        display: inline-block;
+        font-size: $smallFont;
+        font-weight: bold;
+        color: $white;
+        text-decoration: none;
+        vertical-align: middle;
+        margin-left: auto;
+        padding: 1rem 1rem;
+    }
+}
+
+footer {
+    padding: 1rem;
+    text-align: right;
+    background-color: $blue;
+    margin-top: auto;
+
+    .small {
+        color: $white;
+        font-size: $smallFont;
+        padding: 0.5rem;
+    }
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background: $white;
+    box-shadow: 0px 1rem 2rem 0px $grey;
+    a {
+        color: $black;
+        text-decoration: none;
+        cursor: pointer;
+        &.active {
+            color: $blue;
+            font-weight: bold;
+            border-bottom: 0.2rem solid $blue;
+        }
+    }
+}
+
+.navbar-item {
+    padding: 1rem 1rem;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+main {
+    background-color: white;
+    flex: 1 1 auto;
+}
+
+body {
+    min-height: 100vh;
+}
+
+
+.container {
+    padding: 4rem;
+}
