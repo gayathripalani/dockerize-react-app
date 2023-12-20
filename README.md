@@ -80,3 +80,8 @@ kubectl get secret -o yaml
 #To pull image and deploy the pods
 
 kubectl apply -f my-app-deployment.yaml
+
+#to check the image pulled and run
+kubectl describe pod my-react-app-67c7f997c4-k27mw
+
+- this is how we configure cluster to be able to pull from private repository. docker.hub has public repo, made it private to pull using secret, secret should in same namespace as deployment,
