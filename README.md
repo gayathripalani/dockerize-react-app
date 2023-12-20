@@ -19,7 +19,7 @@ npm run start
 To run the frontend test cases -
 npm run test
 
-Docker setup
+DOCKER SETUP
 
 #build the docker image
 
@@ -45,7 +45,7 @@ docker push gayathri8/reactapp:v1.0
 
 docker pull gayathri8/reactapp:v1.0
 
-Kubernetes setup
+KUBERNETES SETUP
 
 #make the docker image private and login
 
@@ -80,3 +80,18 @@ kubectl get secret -o yaml
 #To pull image and deploy the pods
 
 kubectl apply -f my-app-deployment.yaml
+
+#to check the image pulled and run
+kubectl describe pod my-react-app-67c7f997c4-k27mw
+
+- this is how we configure cluster to be able to pull from private repository. docker.hub has public repo, made it private to pull using secret, secret should in same namespace as deployment,
+
+Minikube
+Minikube needs virtualisation - qemu/hyperkit
+
+minikube start --vm-driver=qemu
+
+kubectl get nodes - get nodes of kubernetes cluster, one node with master processes
+minikube status
+
+kubectl version - to check both client and server version
