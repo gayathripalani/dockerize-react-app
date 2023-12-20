@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-react-app
+  labels:
+    app: my-react-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-react-app
+  template:
+    metadata:
+      labels:
+        app: my-react-app
+    spec:
+      imagePullSecrets:
+        - name: my-registry-key
+      containers:
+        - name: my-react-app
+          image: docker.io/gayathri8/reactapp:v1.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
